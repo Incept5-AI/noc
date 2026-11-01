@@ -4,6 +4,8 @@ A live NOC-style dashboard for a small, mixed fleet of machines — NVIDIA GPU b
 GB10 and anything with `nvidia-smi`), Apple Silicon Macs and Raspberry Pis — viewable from anywhere,
 including a native iPhone app.
 
+More from us: [github.com/Incept5-AI](https://github.com/Incept5-AI)
+
 Each machine runs a tiny **stdlib-only Python agent** that pushes a sample every 3 s to one central
 collector. The collector keeps the latest sample and a rolling 5-minute history per host in memory
 and serves a single-page dashboard with no build step and no external assets.
