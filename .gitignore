@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Compiled Mac sensor helpers (build from the .c/.m sources — see README)
+/fan
+/pwr
+/therm
+/pressure
+
+# Runtime state / secrets (never commit)
+*.db
+.env
+power-audit.log
+*.bak-*
+
+# iOS app: the project is generated from ios/project.yml
+ios/NOC.xcodeproj/
+
+# Local demo / screenshot runs
+demo/*.db

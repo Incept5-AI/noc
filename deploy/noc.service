@@ -1,0 +1,18 @@
+[Unit]
+Description=Fleet NOC — dashboard + collector (FastAPI, magic-link auth)
+After=network.target
+
+[Service]
+Type=simple
+User=noc
+Group=noc
+WorkingDirectory=/opt/noc
+EnvironmentFile=/opt/noc/.env
+ExecStart=/opt/noc/.venv/bin/python -m uvicorn noc_web:app --host 127.0.0.1 --port 8788
+Restart=on-failure
+RestartSec=3
+ProtectSystem=full
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
